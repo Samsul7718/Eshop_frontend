@@ -20,6 +20,7 @@ const Home = () => {
             <hr />
 
         <ul className='space-y-4'>
+            {}
             <li  className="flex items-center gap-4 border p-2 rounded">
                 <img src="" alt="" />
                 <div className='flex-1'>
