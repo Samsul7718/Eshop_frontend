@@ -20,8 +20,11 @@ const Home = () => {
             <hr />
 
         <ul className='space-y-4'>
-            {}
-            <li  className="flex items-center gap-4 border p-2 rounded">
+            {products.map((item,index)=>(
+
+            <li 
+            key={index} 
+            className="flex items-center gap-4 border p-2 rounded">
                 <img src="" alt="" />
                 <div className='flex-1'>
                    <h3 className="font-medium">name</h3>
@@ -29,6 +32,7 @@ const Home = () => {
                 </div>
                 <button className="bg-violet-400 hover:bg-green-400 text-white px-4 py-2 rounded">Add to cart</button>
             </li>
+             ))}
         </ul>
     
     </div>
