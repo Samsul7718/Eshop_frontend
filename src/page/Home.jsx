@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
+    const [products,setProducts]=useState([])
   return (
      <div className='p-4'>
         <div className='flex items-center justify-between gap-80 p-5'>
