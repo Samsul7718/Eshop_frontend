@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 
 const Home = () => {
     const [products,setProducts]=useState([])
     const Navigate=useNavigate();
+    const {addToCart}=useCart()
 
     useEffect(()=>{
         fetch("http://localhost:3000/api/product")
@@ -13,6 +15,7 @@ const Home = () => {
       
     },[])
       console.log("product from backend",products);
+      
       const handleCartProduct=(product)=>{
          addToCart(product);
          Navigate('/cart')
