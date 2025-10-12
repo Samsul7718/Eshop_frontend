@@ -11,7 +11,7 @@ const ProductCard = ({item}) => {
       <img
         src={product.imageUrl}
         alt={product.name}
-        className="w-full max-h-92 p-2 object-contain"
+        className="w-full max-h-52 p-2 object-contain"
       />
       <div className="p-6">
         <div className='flex items-center justify-between'>
