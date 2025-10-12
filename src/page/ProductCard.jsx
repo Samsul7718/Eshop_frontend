@@ -9,7 +9,10 @@ const ProductCard = ({item}) => {
     const handleCartProduct=(product)=>{
          addToCart(product);
          Navigate('/cart')
+         console.log("selected product",product);
       }
+      
+      
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4'>
           {item.map((product,index)=>(

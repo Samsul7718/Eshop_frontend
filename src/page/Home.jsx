@@ -17,10 +17,7 @@ const Home = () => {
     },[])
       console.log("product from backend",products);
 
-      // const handleCartProduct=(product)=>{
-      //    addToCart(product);
-      //    Navigate('/cart')
-      // }
+     
   return (
      <div className='p-0'>
         <div className='flex items-center justify-between gap-10 md:gap-40 lg:gap-80 p-4 bg-cyan-100'>
