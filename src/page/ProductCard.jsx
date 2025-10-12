@@ -1,6 +1,15 @@
 import React from 'react'
+import { useCart } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({item}) => {
+  const {addToCart}=useCart();
+  const Navigate=useNavigate();
+
+    const handleCartProduct=(product)=>{
+         addToCart(product);
+         Navigate('/cart')
+      }
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4'>
           {item.map((product,index)=>(
@@ -21,6 +30,7 @@ const ProductCard = ({item}) => {
        
         <div className='flex justify-center p-6'>
            <button
+           onClick={()=>handleCartProduct(product)}
             className="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition-all">
             Add to Cart
            </button>
