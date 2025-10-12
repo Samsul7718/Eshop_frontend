@@ -15,8 +15,17 @@ const addToCart=(product)=>{
      setCart(prev=>[...prev,{...product, qty:1}])
    }
 }
+const incQty=(id)=>{
+  setCart((prev)=>prev.map(item=>item.id===id?{...item,qty:item.qty+1}:item))
+}
+const decQty=()=>{
+
+}
+const remove=()=>{
+
+}
 return(
-<CartContext.Provider value={{cart,addToCart}}>
+<CartContext.Provider value={{cart,addToCart,incQty}}>
     {children}
 </CartContext.Provider>
 )
