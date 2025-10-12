@@ -2,7 +2,7 @@ import React from 'react'
 import { useCart } from '../context/CartContext'
 
 const Cart = () => {
-  const {cart,incQty}=useCart();
+  const {cart,incQty,decQty}=useCart();
   return (
     <div className='max-w-4xl mx-auto p-5'>
      <h1 className='text-2xl font-bold mb-5'>Your Shopping Cart</h1>
@@ -28,7 +28,7 @@ const Cart = () => {
           </div>
          </div>
          <div className='flex items-center gap-3'>
-          <button>-</button>
+          <button onClick={()=>decQty(item.id)}>-</button>
           <span>{item.qty}</span>
           <button onClick={()=>incQty(item.id)}>+</button>
           <button>remove</button>
