@@ -2,7 +2,7 @@ import React from 'react'
 import { useCart } from '../context/CartContext'
 
 const Cart = () => {
-  const {cart,incQty,decQty}=useCart();
+  const {cart,incQty,decQty,remove}=useCart();
   return (
     <div className='max-w-4xl mx-auto p-5'>
      <h1 className='text-2xl font-bold mb-5'>Your Shopping Cart</h1>
@@ -31,7 +31,7 @@ const Cart = () => {
           <button onClick={()=>decQty(item.id)}>-</button>
           <span>{item.qty}</span>
           <button onClick={()=>incQty(item.id)}>+</button>
-          <button>remove</button>
+          <button onClick={()=>remove(item.id)}>remove</button>
          </div>
 
         </div>
