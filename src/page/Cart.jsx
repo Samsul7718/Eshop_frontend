@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const {cart,incQty,decQty,remove}=useCart();
+  const totalPrice=cart.reduce((sum,item)=>sum+item.price*(item.qty || 1),0);
   return (
     <div className='max-w-4xl mx-auto p-5'>
      <h1 className='text-2xl font-bold mb-5'>Your Shopping Cart</h1>
@@ -42,7 +43,7 @@ const Cart = () => {
      <div className='border p-6 mt-4 flex justify-between'>
       <div className='flex flex-col gap-6'>
         <div className='text-bold-500 text-2xl text-gray-800'>Total Payble Amount</div>
-      <span className='text-2xl font-bold'>$ 100</span>
+      <span className='text-2xl font-bold'>Total: ${totalPrice}</span>
       </div>
       <Link to='/payment'>  
       <button className='bg-green-400 text-white p-3 rounded-md shadow-md w-30 h-15 mt-5'>CheckOut</button>
