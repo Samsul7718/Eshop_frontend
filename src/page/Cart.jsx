@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCart } from '../context/CartContext'
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const {cart,incQty,decQty,remove}=useCart();
@@ -38,6 +39,16 @@ const Cart = () => {
       ))}
     </div>
      )}
+     <div className='border p-6 mt-4 flex justify-between'>
+      <div className='flex flex-col gap-6'>
+        <div className='text-bold-500 text-2xl text-gray-800'>Total Payble Amount</div>
+      <span className='text-2xl font-bold'>$ 100</span>
+      </div>
+      <Link to='/payment'>  
+      <button className='bg-green-400 text-white p-3 rounded-md shadow-md w-30 h-15 mt-5'>CheckOut</button>
+     </Link>
+     </div>
+     
    
     </div>
    
