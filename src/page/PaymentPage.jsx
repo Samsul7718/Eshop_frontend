@@ -6,6 +6,7 @@ const PaymentPage = () => {
       <div className='text-2xl font-bold mb-5'>PaymentPage</div>
       <div className='flex items-center spaces-between justify-center gap-4'>
          <div className='font-bold text-gray-600'>Total Amount: $100</div>
+         <button></button>
       <button className='bg-green-400 p-4 rounded-md shadow-lg'>PayNow</button>
       </div>
      
