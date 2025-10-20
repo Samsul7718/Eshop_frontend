@@ -19,6 +19,7 @@ const PaymentPage = () => {
         <Link to='/'>
          <button className='bg-yellow-500 text-white rounded-md shadow-md p-3'>Shop More</button>
         </Link>
+        <button>go to cart</button>
         <Link to='/'>
          <button className='bg-green-400 p-3 rounded-md shadow-lg w-30 h-14'>PayNow</button>
         </Link>
