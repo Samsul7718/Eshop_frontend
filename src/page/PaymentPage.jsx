@@ -1,5 +1,6 @@
 import React from 'react'
 import {useCart} from '../context/CartContext'
+import { Link } from 'react-router-dom';
 
 const PaymentPage = () => {
   const {cart} = useCart();
@@ -12,11 +13,15 @@ const PaymentPage = () => {
          className='font-bold text-gray-600 border p-4'>
           Total Amount: ${totalPrice}
           </div>
-   
+     {console.log('total payment amount',totalPrice)}
      
       <div className='flex items-center spaces-between justify-center gap-8'>
+        <Link to='/'>
          <button className='bg-yellow-500 text-white rounded-md shadow-md p-3'>Shop More</button>
+        </Link>
+        <Link to='/'>
          <button className='bg-green-400 p-3 rounded-md shadow-lg w-30 h-14'>PayNow</button>
+        </Link>
       </div>
      
     </div>
