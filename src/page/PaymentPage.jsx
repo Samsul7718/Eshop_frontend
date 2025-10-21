@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {useCart} from '../context/CartContext'
 import { Link } from 'react-router-dom';
 
 const PaymentPage = () => {
+  const [paymentMethod,setPaymentMethod]=useState("card");
   const {cart} = useCart();
    const totalPrice=cart.reduce((sum,item)=>sum+item.price*(item.qty || 1),0);
+
+   const handlePayment=()=>{
+    alert(`Payment of $${totalPrice} done using ${paymentMethod}`);
+   }
   return (
     <div className='flex flex-col items-center justify-center gap-10 mt-20'>
       <h2 className='text-2xl font-bold mb-5'>Payment</h2>
@@ -16,16 +21,30 @@ const PaymentPage = () => {
      {console.log('total payment amount',totalPrice)}
 
      <div className='space-y-2'>
-       {["card","upi","netbanking","wallet"].map((process)=>(
-        <label key={process} className='flex flex-col space-y-1'>
+       {["card","upi","netbanking","wallet","Cash On Delivery"].map((process)=>(
+        <label key={process} className='flex items-center gap-2'>
           <input 
           name='paymentMethod'
           value={process}
-          type="radio" />
+          type="radio" 
+          checked={paymentMethod===process}
+          onClick={(e)=>setPaymentMethod(e.target.value)}
+          />
           <span className='capitalize'>{process}</span>
 
         </label>
        ))}
+     </div>
+     <div className='flex justify-center gap-25'>
+      <Link to='/'>
+         <button className='bg-yellow-500 text-white rounded-md shadow-md p-3'>Shop More</button>
+        </Link>
+     <button 
+     onClick={handlePayment}
+     className='bg-green-500 text-white px-6 py-3'>
+      Pay ${totalPrice} 
+     </button>
+
      </div>
      
       {/* <div className='flex items-center spaces-between justify-center gap-8'>
