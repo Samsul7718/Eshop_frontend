@@ -11,11 +11,11 @@ const PaymentPage = () => {
     alert(`Payment of $${totalPrice} done using ${paymentMethod}`);
    }
   return (
-    <div className='flex flex-col items-center justify-center gap-10 mt-20'>
+    <div className='flex flex-col items-center justify-center gap-10 mt-10'>
       <h2 className='text-2xl font-bold mb-5'>Payment</h2>
 
          <div
-         className='font-bold text-gray-600 border p-4'>
+         className='font-bold text-gray-600 border p-2'>
           Total Amount: ${totalPrice}
           </div>
      {console.log('total payment amount',totalPrice)}
@@ -35,7 +35,17 @@ const PaymentPage = () => {
         </label>
        ))}
      </div>
-     <div className='flex justify-center gap-25'>
+        {paymentMethod === "card" && (
+        <div className="mt-2 space-y-2">
+          <input type="text" placeholder="Card Number" className="border p-2 w-full" />
+          <input type="text" placeholder="Name on Card" className="border p-2 w-full" />
+          <div className="flex gap-2">
+            <input type="text" placeholder="MM/YY" className="border p-2 w-1/2" />
+            <input type="text" placeholder="CVV" className="border p-2 w-1/2" />
+          </div>
+        </div>
+      )}
+     <div className='flex justify-center gap-25 mt-0'>
       <Link to='/'>
          <button className='bg-yellow-500 text-white rounded-md shadow-md p-3'>Shop More</button>
         </Link>
