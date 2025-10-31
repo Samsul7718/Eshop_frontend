@@ -8,7 +8,7 @@ const PaymentPage = () => {
    const totalPrice=cart.reduce((sum,item)=>sum+item.price*(item.qty || 1),0);
 
    const handlePayment=()=>{
-    alert(`Payment of $${totalPrice} done using ${paymentMethod}`);
+    alert(`Payment of ${totalPrice} done using ${paymentMethod}`);
    }
   return (
     <div className='flex flex-col items-center justify-center gap-6 mt-10'>
