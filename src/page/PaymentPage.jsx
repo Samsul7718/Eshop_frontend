@@ -11,12 +11,12 @@ const PaymentPage = () => {
     alert(`Payment of $${totalPrice} done using ${paymentMethod}`);
    }
   return (
-    <div className='flex flex-col items-center justify-center gap-10 mt-10'>
+    <div className='flex flex-col items-center justify-center gap-6 mt-10'>
       <h2 className='text-2xl font-bold mb-5'>Payment</h2>
 
          <div
          className='font-bold text-gray-600 border p-2'>
-          Total Amount: ${totalPrice}
+          Total Amount: INR {totalPrice}
           </div>
      {console.log('total payment amount',totalPrice)}
 
