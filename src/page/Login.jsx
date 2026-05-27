@@ -7,6 +7,7 @@ const Login = () => {
       <div>
         <form action="">
           <input type="text" placeholder='Enter your Name' />
+          <input type="mobile" placeholder='Enter your Mobile Number' />
         </form>
       </div>
     </div>
