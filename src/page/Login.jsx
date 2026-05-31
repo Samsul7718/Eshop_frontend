@@ -6,8 +6,9 @@ const Login = () => {
       <h2>Login Page</h2>
       <div>
         <form action="">
-          <input type="text" placeholder='Enter your Name' />
+          <input type="name" placeholder='Enter your Name' />
           <input type="mobile" placeholder='Enter your Mobile Number' />
+          <input type="city" placeholder='Enter your city' />
           <input type="city" placeholder='Enter your city' />
         </form>
       </div>
