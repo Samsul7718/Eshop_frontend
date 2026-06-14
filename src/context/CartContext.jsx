@@ -26,6 +26,9 @@ const addToCart=(product)=>{
 const incQty=(id)=>{
   setCart((prev)=>prev.map(item=>item.id===id?{...item,qty:item.qty+1}:item))
 }
+const incQty=(id)=>{
+ setCart((prev)=>prev.map(item=>item.id===id?{...item,qty:item.qty+1}:item))
+}
 const decQty=(id)=>{
  setCart((prev)=>prev.map(item=>item.id===id?{...item,qty:item.qty>1?item.qty-1:1}:item))
 }
