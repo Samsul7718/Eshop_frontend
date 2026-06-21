@@ -11,7 +11,7 @@ const Signup = () => {
       <input type="mobile" placeholder='Enter your mobile' />
       <input type="email" placeholder='Enter your email' />
       <input type="city" placeholder='Enter your city' />
-      <input type="city" placeholder='Enter your city' />
+      <input type="gender" placeholder='Enter your gender' />
      </form>
     </div>
     </>
