@@ -13,6 +13,7 @@ const Signup = () => {
       <input type="city" placeholder='Enter your city' />
       <input type="gender" placeholder='Enter your gender' />
       <button type='submit'>Signup</button>
+      <button type='submit'>Login</button>
      </form>
     </div>
     </>
