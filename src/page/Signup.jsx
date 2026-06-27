@@ -14,6 +14,7 @@ const Signup = () => {
       <input type="gender" placeholder='Enter your gender' />
       <button type='submit'>Signup</button>
       <button type='submit'>Login</button>
+      <button type='submit'>cancel</button>
      </form>
     </div>
     </>
