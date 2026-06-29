@@ -6,6 +6,7 @@ const Login = () => {
       <h2>Login Page</h2>
       <div>
         <form action="">
+          <h4>Welcome to Login</h4>
           <input type="name" placeholder='Enter your Name' />
           <input type="mobile" placeholder='Enter your Mobile Number' />
           <input type="city" placeholder='Enter your city' />
